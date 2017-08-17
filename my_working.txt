@@ -1,0 +1,6 @@
+my working
+
+1. database setting
+    $/whisper/whisper-console/src/main/resources/config/database.properties
+
+2.
