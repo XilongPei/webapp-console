@@ -3,7 +3,7 @@ package io.whisper.console.entity;
 import io.whisper.console.common.annotation.ForeignShow;
 import io.whisper.console.common.annotation.Header;
 import io.whisper.console.entity.base.WhisperBaseEntity;
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +16,7 @@ import javax.persistence.Transient;
  */
 @Entity
 @Table(name="tbl_org")
-//@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler", "fieldHandler" })
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler", "fieldHandler" })
 public class WhisperOrg extends WhisperBaseEntity {
     @ForeignShow
     @Header(name = "名称")

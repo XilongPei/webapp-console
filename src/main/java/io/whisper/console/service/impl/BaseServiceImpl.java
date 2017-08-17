@@ -6,7 +6,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
-//import io.whisper.console.dao.RedisDao;
+import io.whisper.console.dao.RedisDao;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.type.Type;
 import org.springframework.stereotype.Service;
@@ -27,8 +27,8 @@ public class BaseServiceImpl implements WhisperBaseService {
     @Resource
     public BaseDao baseDao;
 
-    //@Resource
-    //public RedisDao redisDao;
+    @Resource
+    public RedisDao redisDao;
 
     public <T> Serializable save(T obj) {
 
@@ -280,21 +280,26 @@ public class BaseServiceImpl implements WhisperBaseService {
 
     public <T> boolean addCacheByKey(String key, T object) {
         //return redisDao.add(key, object);
+    	return false;
     }
 
     public <T> boolean saveCacheByKey(String key, T object) {
         //return redisDao.save(key, object);
+    	return false;
     }
 
     public String getCacheByKey(String key) {
         //return redisDao.get(key);
+    	return "";
     }
 
     public <T> T getCacheByKey(String key, Class clazz) {
         //return redisDao.get(key, clazz);
+    	return null;
     }
 
     public List findMapBySql(String sql, Map<String, Object> params, int page, int rows, Class clazz) {
         //return baseDao.findMapBySql(sql, params, page, rows, clazz);
+    	return null;
     }
 }

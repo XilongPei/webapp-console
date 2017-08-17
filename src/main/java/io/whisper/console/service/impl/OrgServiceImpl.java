@@ -79,7 +79,7 @@ public class OrgServiceImpl extends BaseServiceImpl implements OrgService {
 
     @Override
     public Result getOrgNames(String id) {
-        String name=this.redisDao.get("org:"+id);
+        String name = this.redisDao.get("org:"+id);
         if(StrUtil.isEmpty(name)) {
             WhisperOrg org = this.get(WhisperOrg.class,id);
             if(org.getLevelCode().length()==12){

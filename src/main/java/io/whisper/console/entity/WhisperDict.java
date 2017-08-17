@@ -8,11 +8,11 @@ import javax.persistence.Transient;
 import io.whisper.console.common.annotation.ForeignShow;
 import io.whisper.console.common.annotation.Header;
 import io.whisper.console.entity.base.WhisperBaseEntity;
-//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tbl_dict")
-//@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler", "fieldHandler" })
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler", "fieldHandler" })
 public class WhisperDict extends WhisperBaseEntity {
 
     private static final long serialVersionUID = 5569761987303812150L;
